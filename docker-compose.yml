@@ -10,6 +10,6 @@ services:
     network_mode: host
     environment:
       - DEBUG=main,nmea-bridge
-      - nmea_PUSH_port=8080
+      - nmea_PUSH=http://localhost:8080/api/nmeas
     ports:
       - 6000:6000/udp
