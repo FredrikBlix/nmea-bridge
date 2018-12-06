@@ -5,7 +5,7 @@ version: '2'
 services:
   nmea-bridge:
     container_name: nmea-bridge
-    image: coromatic/nmea-bridge:latest
+    image: fredrikblix/nmea-bridge:latest
     restart: always
     network_mode: host
     environment:
