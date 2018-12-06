@@ -13,7 +13,7 @@
 *
 *   You should have received a copy of the GNU Lesser General Public License
 *   along with nmea-bridge.  If not, see <https://www.gnu.org/licenses/>.
-*/    
+*/
 
 const config = require('config');
 const nmea = require('nmea-simple');
@@ -23,8 +23,8 @@ const debug = require('debug')('nmea-bridge');
 
 const Socket = dgram.createSocket('udp4');
 
-const hostPort = `${[config.get('push.host'),
-                        config.get('push.port')].join(':')}`;
+
+const push_uri = config.get('push_uri');
 
 Socket.on('error', (err) => {
     debug(err.stack);
@@ -65,7 +65,7 @@ Socket.on('nmea', async (nmea) => {
 
     // Make HTTP post message with NMEA
     const message = {
-        uri: `http://${hostPort}/api/nmeas`,
+        uri: push_uri,
         method: 'POST',
         json: nmea
     }

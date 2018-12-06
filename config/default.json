@@ -1,7 +1,4 @@
 {
     "port": 6000,
-    "push": {
-        "host": "localhost",
-        "port": 80
-        }
+    "push_uri": "http://localhost/api/nmeas"
 }
