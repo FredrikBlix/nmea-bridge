@@ -1,0 +1,7 @@
+{
+    "port": "nmea_PORT",
+    "push": {
+        "host": "nmea_PUSH_host",
+        "port": "nmea_PUSH_port"
+        }
+}

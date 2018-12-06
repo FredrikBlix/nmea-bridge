@@ -1,0 +1,15 @@
+# This file is designed for setting up nmea-bridge a docker server
+# network_mode is set to host so we get senders IP address.
+
+version: '2'
+services:
+  nmea-bridge:
+    container_name: nmea-bridge
+    image: coromatic/nmea-bridge:latest
+    restart: always
+    network_mode: host
+    environment:
+      - DEBUG=main,nmea-bridge
+      - nmea_PUSH_port=8080
+    ports:
+      - 6000:6000/udp

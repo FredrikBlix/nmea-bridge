@@ -1,0 +1,7 @@
+{
+    "port": 6000,
+    "push": {
+        "host": "localhost",
+        "port": 80
+        }
+}
