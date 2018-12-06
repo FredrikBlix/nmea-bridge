@@ -1,6 +1,6 @@
 {
   "name": "nmea-bridge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bridging NMEA on UDP to HTTP requests",
   "main": "main.js",
   "scripts": {
